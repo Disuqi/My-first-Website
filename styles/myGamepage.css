@@ -1,0 +1,84 @@
+.myGamePage .next {
+    background-image: url(../images/pixelArrow.png);
+    background-size: cover;
+}
+
+@font-face {
+    font-family: "Munro";
+    src: url(../fonts/Munro-2LYe.ttf) format("truetype");
+    font-style: normal;
+}
+
+.myGamePage * {
+    font-family: "Munro";
+    transition: 0s;
+}
+
+.myGamePage #cross,
+.myGamePage #cross::before,
+.myGamePage #cross::after,
+.myGamePage #cross~label,
+.myGamePage a::before,
+.myGamePage #cross::after,
+.myGamePage #check:checked~ul .menuitem,
+.myGamePage #check:checked~ul #home,
+.myGamePage #check:checked~ul #myGame {
+    border-radius: 0;
+    transition: 0s;
+    transition-delay: 0s;
+}
+
+.Yasuo {
+    background-image: url(../images/Yasuo/yasuo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backface-visibility: hidden;
+    animation: slideshow 10s linear infinite;
+    animation-timing-function: ease-in-out;
+    text-indent: -9999px;
+    height: 300px;
+    width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.gifs {
+    height: 300px;
+    width: auto;
+}
+
+#yasuoEnd {
+    background-image: url(../images/Yasuo/yasuoend.gif);
+    background-size: cover;
+    background-position: center;
+    text-indent: -99999px;
+}
+
+#end {
+    display: block;
+    height: 80vh;
+    align-self: center;
+    justify-self: center;
+}
+
+#lightMode:checked~#background .next {
+    background-image: url(../images/pixelArrowLight.png);
+}
+
+#lightMode:checked~.lightModeLogo {
+    background-image: url(../images/pixelDarkSun.png);
+}
+
+.lightModeLogo {
+    background-image: url(../images/pixelLightSun.png);
+    transition: 0s;
+}
+
+#background {
+    transition: 0s;
+}
+
+#lightMode:checked~#background #end #yasuoEnd {
+    background-image: url(../images/Yasuo/lightyasuoend.gif);
+}

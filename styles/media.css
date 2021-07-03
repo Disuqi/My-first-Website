@@ -1,0 +1,133 @@
+@media only screen and ( max-width: 700px) and (orientation: portrait) {
+    html {
+        scroll-snap-type: none;
+    }
+    .title {
+        font-size: 7vw;
+    }
+    p {
+        margin-left: 5vw;
+        margin-right: 5vw;
+        font-size: 4vw;
+    }
+    #cross {
+        border-radius: 0 0 10vw 0;
+        width: 15vw;
+        height: 15vw;
+    }
+    #cross::before,
+    #cross::after {
+        left: 4vw;
+        top: 4vw;
+        width: 6vw;
+        height: 1vw;
+    }
+    #cross::after {
+        top: 0vw;
+    }
+    #check:not(:checked)~ul {
+        width: 0;
+        height: 0;
+    }
+    #check:checked~#cross::before,
+    #check:checked~#cross::after {
+        transform: translateX(45vw) translateY(4vw) rotateZ(315deg);
+        filter: brightness(170%);
+    }
+    #check:checked~#cross::after {
+        transform: translateX(45vw) translateY(0vw) rotateZ(-315deg);
+    }
+    #check:checked~#cross {
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(50, 50, 50);
+    }
+    .menuitem {
+        position: relative;
+        width: 90vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20vh;
+        transition-delay: -2s;
+        transform: translateX(0px);
+    }
+    #check:checked~ul .menuitem {
+        display: block;
+        transition-delay: 2s;
+    }
+    #check:checked~ul #myGame {
+        transition-delay: 1.25s;
+        transform: translateX(0px);
+    }
+    #check:checked~ul #home {
+        transition-delay: 0.75s;
+        transform: translateX(0px);
+    }
+    .next {
+        height: 6vw;
+        width: 8vw;
+    }
+    .lightModeLogo {
+        margin-top: 3vw;
+        height: 7vw;
+        width: 7vw;
+    }
+    #lightMode:checked~#background nav #cross {
+        background-color: rgb(204, 204, 204);
+    }
+    .gifs {
+        height: 50vw;
+        width: auto;
+    }
+    .contact {
+        height: 15vw;
+        width: 15vw;
+        margin: 1vw;
+    }
+    .Yasuo {
+        height: 30vw;
+        width: 30vw;
+    }
+}
+
+@media only screen and ( max-height: 500px) and (orientation: landscape) {
+    .grid {
+        grid-template-rows: 150vh 150vh 150vh 150vh auto;
+    }
+    .title {
+        font-size: 7vh;
+    }
+    p {
+        margin-right: 6vh;
+        margin-left: 6vh;
+        font-size: 4vh;
+    }
+    .lightModeLogo {
+        height: 15vh;
+        width: 15vh;
+    }
+    .gifs {
+        height: 50vw;
+        width: auto;
+    }
+    .contact {
+        height: 15vh;
+        width: 15vh;
+        margin: 1vh;
+    }
+    html {
+        scroll-snap-type: none;
+    }
+    .gifs {
+        height: 50vh;
+        width: auto;
+    }
+    .Yasuo {
+        height: 40vh;
+        width: 40vh;
+    }
+    .next {
+        height: 12vh;
+        width: 12vh;
+    }
+}

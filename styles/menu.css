@@ -1,0 +1,154 @@
+#check {
+    display: none;
+}
+
+#cross {
+    background-color: rgba(50, 50, 50, 0.5);
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 0px 50px 50px 0px;
+    transition: 2s ease-out;
+    position: absolute;
+    color: rgba(0, 0, 0, 0);
+}
+
+#cross::before,
+#cross::after {
+    content: "";
+    background-color: #803d3d;
+    display: block;
+    position: relative;
+    width: 40px;
+    height: 5px;
+    top: 35px;
+    left: 25px;
+    border-radius: 100px;
+    justify-content: center;
+    transition: 2s ease-out;
+}
+
+#cross::after {
+    top: 25px;
+}
+
+#check:checked~#cross::before,
+#check:checked~#cross::after {
+    transform: translateX(500px) translateY(18px) rotateZ(315deg);
+    filter: brightness(170%);
+}
+
+#check:checked~#cross::after {
+    transform: translateX(500px) translateY(-18px) rotateZ(-315deg);
+}
+
+#check:checked~#cross {
+    width: 600px;
+}
+
+.menuitem {
+    color: white;
+    list-style: none;
+    min-width: 200px;
+    margin: 30px;
+    top: 0px;
+    pointer-events: none;
+    position: absolute;
+    transform: translateX(-70px);
+    transition: opacity 2s ease-out -0.5s, transform 2s ease-out;
+    opacity: 0;
+}
+
+#check:checked~ul .menuitem {
+    pointer-events: fill;
+    transition-delay: 1.5s;
+    opacity: 1;
+}
+
+#check:checked~ul #myGame {
+    transition-delay: 0.6s;
+    transform: translateX(110px);
+}
+
+#check:checked~ul #home {
+    transition-delay: 0.3s;
+    transform: translateX(260px);
+}
+
+#lightMode {
+    display: none;
+}
+
+.lightModeLogo {
+    z-index: 2;
+    display: block;
+    position: fixed;
+    right: 1vw;
+    opacity: 0.8;
+    float: right;
+    height: 60px;
+    width: 60px;
+    margin-top: 10px;
+    text-indent: -9999px;
+    background-image: url(../images/sun-icon.png);
+    border-radius: 50px;
+    background-size: cover;
+    background-position: center;
+    transition: background-color 2s, background-image 2s;
+    cursor: pointer;
+    transition: 1s ease-out;
+}
+
+.lightModeLogo:hover {
+    filter: brightness(150%);
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+#lightMode:checked~.lightModeLogo:hover {
+    filter: brightness(0%);
+}
+
+#lightMode:checked~.lightModeLogo {
+    background-image: url(../images/darkSun.png);
+}
+
+#lightMode:checked~#background {
+    background-color: aliceblue;
+    color: rgba(50, 50, 50);
+}
+
+#lightMode:checked~#background .title {
+    color: #3291fc;
+}
+
+#lightMode:checked~#background .next {
+    background-image: url(../images/arrowLight.png);
+}
+
+#lightMode:checked~#background .textLink {
+    color: #3291fc;
+}
+
+#lightMode:checked~#background nav #cross::before,
+#lightMode:checked~#background nav #cross::after {
+    background-color: #3291fc;
+}
+
+#lightMode:checked~#background nav #cross {
+    background-color: rgba(204, 204, 204, 0.7);
+}
+
+#lightMode:checked~#background nav ul li {
+    color: rgb(50, 50, 50, 0.7);
+}
+
+#lightMode:checked~#background nav .link:hover,
+#lightMode:checked~#background nav .link:focus {
+    color: #3291fc;
+    filter: brightness(130%);
+}
+
+#lightMode:checked~#background nav .link::before {
+    background-color: #3291fc;
+}

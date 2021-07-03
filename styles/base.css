@@ -1,0 +1,103 @@
+html {
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: roboto light;
+    src: url(../fonts/Roboto-Light.ttf) format("truetype");
+    font-style: normal;
+}
+
+body {
+    background-color: rgb(25, 25, 25);
+    color: rgba(255, 255, 255, 0.7);
+    font-family: "roboto light";
+    font-size: 180%;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+#background {
+    background-color: rgb(25, 25, 25);
+    transition: background-color 2s, color 2s;
+}
+
+nav {
+    position: fixed;
+    z-index: 1;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.25s ease-out;
+}
+
+.next {
+    display: block;
+    height: 40px;
+    width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    background-image: url(../images/arrow.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-indent: -99999px;
+    margin-bottom: 200px;
+    transition: 1s;
+}
+
+.title {
+    font-size: 50px;
+    color: #bf5c5c;
+}
+
+.copyright {
+    position: fixed;
+    font-size: 15px;
+    float: left;
+    bottom: 0;
+}
+
+#welcomeTitle,
+#welcomeP,
+#homePage .next {
+    opacity: 0;
+    animation: welcome 2s 1s 1 forwards;
+}
+
+#welcomeP {
+    animation-delay: 3s;
+}
+
+#homePage .next {
+    animation-delay: 5s;
+}
+
+p {
+    display: block;
+    max-width: 1500px;
+    margin-left: 5vw;
+    margin-right: 4vw;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 100vh 100vh 100vh 100vh auto;
+    justify-items: center;
+    align-items: center;
+}
+
+html {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}

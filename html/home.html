@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Home</title>
+    <link rel="icon" type="image/png" href="../images/cube.png">
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/effects.css">
+    <link rel="stylesheet" href="../styles/menu.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/media.css">
+</head>
+
+<body id="homePage">
+    <input type="checkbox" id="lightMode">
+    <label for="lightMode" id="lightLabel" class="lightModeLogo">Light Mode</label>
+    <div id="background">
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" id="cross">Menu</label>
+            <ul>
+                <li id="home" class="menuitem"><a href="home.html" class="link">Home</a></li>
+                <li id="myGame" class="menuitem"><a href="myGame.html" class="link">My Game</a></li>
+                <li id="contact" class="menuitem"><a href="contact.html" class="link">Contact Me</a></li>
+            </ul>
+        </nav>
+        <section class="grid">
+            <div class="snap" id="welcome">
+                <h1 class="title" id="welcomeTitle">Welcome</h1>
+                <p lang="en-GB" id="welcomeP">I am Disuqi Hijazi, this is my first website and it is all about what I do in my free time</p>
+                <a class="focus" href="#game">
+                    <div class="arrow">
+                        <p lang="en-GB" class="next">next</p>
+                    </div>
+                </a>
+            </div>
+            <div class="snap" id="game">
+                <h2><a href="myGame.html" class="title">My Game</a></h2>
+                <p lang="en-GB">This page is about a video game I am currently working on in my free time. I recently started learning about game development by watching Youtube videos and I really liked it. Not too long ago I had an idea for a videogame which me and
+                    my friends thought was great, so I decided to start making it. On this page (click the title) you can see what I have done so far.</p>
+                <a class="focus" href="#aboutMe">
+                    <div class="arrow">
+                        <p lang="en-GB" class="next">next</p>
+                    </div>
+                </a>
+            </div>
+            <div class="snap" id="aboutMe">
+                <h3 class="title">About Me</h3>
+                <p lang="en-GB">I am the developer of this website, I am currently a student at the University of Salford and I am studying computer science. I am 18 years old, I like games (of course), anime and I am really interested in technology. I am very lazy and
+                    unemployed for some unknown reason. When I finish this course I hope I will be able to get a job at a famous video game company like Bandai Namco, Riot Games, Sucker Punch Productions...
+                </p>
+                <a class="focus" href="#contactMe">
+                    <div class="arrow">
+                        <p lang="en-GB" class="next">next</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="snap" id="contactMe">
+                <h4><a href="contact.html" class="title">Contact Me</a></h4>
+                <p lang="en-GB">Is there something you would like to tell me? Feel free to contact me.
+                </p>
+                <a class="focus" href="#welcome">
+                    <div class="arrow">
+                        <p lang="en-GB" class="next top">Back to the top</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <footer>
+            <p lang="en-GB" class="copyright">copyright &#169; All rights reserved</p>
+        </footer>
+    </div>
+</body>
+
+</html>

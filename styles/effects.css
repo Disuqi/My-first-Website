@@ -1,0 +1,54 @@
+html {
+    scroll-snap-type: y proximity;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.link {
+    position: relative;
+    transition: 0.4s ease-out;
+}
+
+.link:hover,
+.link:focus {
+    color: #ff7a7a;
+}
+
+.link::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff7a7a;
+    transform-origin: center;
+    transition: transform 0.4s ease-out;
+}
+
+.link:hover::before,
+.link:focus::before {
+    transform: scaleX(1);
+    transform-origin: center;
+}
+
+.snap {
+    scroll-snap-align: center;
+}
+
+.arrow:hover .next,
+.focus:focus .next {
+    transform: translateY(10px);
+    filter: brightness(200%);
+}
+
+.arrow:hover .top,
+.focus:focus .top {
+    transform: rotateX(180deg);
+}
+
+a:hover,
+a:focus {
+    filter: brightness(130%);
+}

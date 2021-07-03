@@ -1,0 +1,72 @@
+html {
+    overflow: hidden;
+}
+
+.contacts {
+    text-indent: -9999px;
+    display: block;
+    height: 80px;
+    width: 80px;
+}
+
+.contact {
+    display: inline-block;
+    background-size: 60%;
+    border-radius: 100%;
+    margin: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateY(2000px);
+    animation: contactsAnimation 1s 5.5s 1 forwards;
+    transition: 1s ease-out;
+}
+
+.contact:hover,
+.contact:focus {
+    filter: brightness(120%);
+}
+
+#email {
+    background-color: red;
+    background-image: url(../images/contact/mail-icon.png);
+}
+
+#instagram {
+    background-image: url(../images/contact/instagram-logo.png);
+    background-color: #cd007a;
+    animation-delay: 6s;
+}
+
+#twitter {
+    background-image: url(../images/contact/twitter-logo.png);
+    background-color: #1da1f2;
+    animation-delay: 6.5s;
+}
+
+#discord {
+    background-image: url(../images/contact/discord-logo.png);
+    background-color: #7289da;
+    animation-delay: 7s;
+}
+
+.hey {
+    transform: translateX(2000px);
+    animation: hey 1s 1s 1 forwards;
+}
+
+.heyP {
+    transform: translateX(-2000px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15vh;
+    animation: hey 1s 2.5s 1 forwards;
+}
+
+.heading {
+    padding-top: 25vh;
+}
+
+#background {
+    height: 100vh;
+    width: 100vw;
+}
